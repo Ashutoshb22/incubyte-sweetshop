@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- script: echo "Exporting Procurement Solution"
+  displayName: 'Export Solution'
+
+- script: echo "Running Tests"
+  displayName: 'Run Tests'
+
+- script: echo "Deploying to Test Environment"
+  displayName: 'Deploy to Test'
+
+- script: echo "Waiting for Approval"
+  displayName: 'Manual Approval'
+
+- script: echo "Deploying to Production"
+  displayName: 'Deploy to Prod'
